@@ -39,16 +39,16 @@ jobs:
         run: west zephyr-export
       
       - name: West Build (Left)
-        run: west build -s zmk/app -b nice_nano_v2 -- -DSHIELD=sophy40_left -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
+        run: west build -s zmk/app -b seeeduino_xiao_ble -- -DSHIELD=sophy40_left -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
       
       - name: Rename zmk.uf2 (Left)
-        run: cp build/zephyr/zmk.uf2 sophy40_left_nice_nano_v2.uf2
+        run: cp build/zephyr/zmk.uf2 sophy40_left_xiao_ble.uf2
       
       - name: West Build (Right)
-        run: west build --pristine -s zmk/app -b nice_nano_v2 -- -DSHIELD=sophy40_right -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
+        run: west build --pristine -s zmk/app -b seeeduino_xiao_ble -- -DSHIELD=sophy40_right -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
       
       - name: Rename zmk.uf2 (Right)
-        run: cp build/zephyr/zmk.uf2 sophy40_right_nice_nano_v2.uf2
+        run: cp build/zephyr/zmk.uf2 sophy40_right_xiao_ble.uf2
       
       - name: Archive artifacts
         uses: actions/upload-artifact@v4

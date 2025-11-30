@@ -36,7 +36,7 @@ Edit the `config/sophy40.keymap` file to customize your keymap.
 ## Supported Boards
 
 Current configuration supports:
-- nice!nano v2
+- Seeed Studio XIAO nRF52840 (BLE)
 
 To use a different board, modify the `-b` option in `.github/workflows/build.yml`.
 
