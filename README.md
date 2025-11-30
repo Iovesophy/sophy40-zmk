@@ -19,7 +19,7 @@ This repository uses GitHub Actions to automatically build the firmware.
 
 ## Customizing Keymap
 
-Edit the `config/corne.keymap` file to customize your keymap.
+Edit the `config/sophy40.keymap` file to customize your keymap.
 
 ### Layer Structure
 
@@ -29,8 +29,8 @@ Edit the `config/corne.keymap` file to customize your keymap.
 
 ## Configuration Files
 
-- `config/corne.keymap`: Keymap definitions
-- `config/corne.conf`: Keyboard settings (Bluetooth, sleep, etc.)
+- `config/sophy40.keymap`: Keymap definitions
+- `config/sophy40.conf`: Keyboard settings (Bluetooth, sleep, etc.)
 - `config/west.yml`: ZMK version management
 
 ## Supported Boards
