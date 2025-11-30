@@ -1,46 +1,46 @@
-# ZMK Firmware Configuration
+# sophy40-zmk
 
-このリポジトリは、ZMK Firmwareを使用したキーボード設定です。
+ZMK Firmware configuration for custom keyboard.
 
-## ビルド方法
+## Build
 
-このリポジトリをGitHubにプッシュすると、GitHub Actionsが自動的にファームウェアをビルドします。
+This repository uses GitHub Actions to automatically build the firmware.
 
-1. このリポジトリをGitHubにプッシュ
-2. Actionsタブでビルドの進行状況を確認
-3. ビルドが完了したら、Artifactsからファームウェア（.uf2ファイル）をダウンロード
+1. Push changes to GitHub
+2. Check build progress in the Actions tab
+3. Download firmware (.uf2 files) from Artifacts when build completes
 
-## ファームウェアの書き込み
+## Flashing Firmware
 
-1. キーボードをリセットモードにする（RESETボタンを2回押す）
-2. マスストレージデバイスとして認識される
-3. ダウンロードした.uf2ファイルをドラッグ&ドロップ
-4. 自動的に再起動して完了
+1. Put keyboard into reset mode (double-tap RESET button)
+2. Device will appear as mass storage device
+3. Drag and drop the downloaded .uf2 file
+4. Device will automatically reboot
 
-## キーマップのカスタマイズ
+## Customizing Keymap
 
-`config/corne.keymap` ファイルを編集してキーマップをカスタマイズできます。
+Edit the `config/corne.keymap` file to customize your keymap.
 
-### レイヤー構成
+### Layer Structure
 
-- **Layer 0 (Default)**: 基本的なQWERTY配列
-- **Layer 1 (Lower)**: 数字、矢印キー、Bluetooth設定
-- **Layer 2 (Raise)**: 記号キー
+- **Layer 0 (Default)**: Basic QWERTY layout
+- **Layer 1 (Lower)**: Numbers, arrow keys, Bluetooth controls
+- **Layer 2 (Raise)**: Symbol keys
 
-## 設定ファイル
+## Configuration Files
 
-- `config/corne.keymap`: キーマップ定義
-- `config/corne.conf`: キーボード設定（Bluetooth、スリープなど）
-- `config/west.yml`: ZMKのバージョン管理
+- `config/corne.keymap`: Keymap definitions
+- `config/corne.conf`: Keyboard settings (Bluetooth, sleep, etc.)
+- `config/west.yml`: ZMK version management
 
-## 対応ボード
+## Supported Boards
 
-現在の設定は以下のボードに対応しています：
+Current configuration supports:
 - nice!nano v2
 
-別のボードを使用する場合は、`.github/workflows/build.yml` の `-b` オプションを変更してください。
+To use a different board, modify the `-b` option in `.github/workflows/build.yml`.
 
-## 参考リンク
+## References
 
 - [ZMK Documentation](https://zmk.dev/)
 - [ZMK Keycodes](https://zmk.dev/docs/codes)
