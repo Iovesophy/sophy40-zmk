@@ -1,0 +1,17 @@
+# Zephyr/ZMK build artifacts
+build/
+modules/
+tools/
+zephyr/
+bootloader/
+zmk/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+*.swp
+*.swo
+*~
