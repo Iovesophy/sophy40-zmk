@@ -16,7 +16,7 @@
 };
 
 &kscan0 {
-    row-gpios
+    col-gpios
         = <&gpio1 15 GPIO_ACTIVE_HIGH>  // Col0: A6_MOSI/P1.15
         , <&gpio1 14 GPIO_ACTIVE_HIGH>  // Col1: A5_MISO/P1.14
         , <&gpio1 13 GPIO_ACTIVE_HIGH>  // Col2: A7_SCK/P1.13
