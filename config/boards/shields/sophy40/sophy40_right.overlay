@@ -6,6 +6,11 @@
 
 #include "sophy40.dtsi"
 
+// Disable I2C to use pins as GPIO
+&i2c0 {
+    status = "disabled";
+};
+
 &default_transform {
     col-offset = <6>;
 };
