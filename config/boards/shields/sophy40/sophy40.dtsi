@@ -42,15 +42,6 @@ RC(2,5) RC(2,4) RC(2,3) RC(2,2) RC(2,1) RC(2,0)  RC(2,6) RC(2,7) RC(2,8) RC(2,9)
             , <&gpio0 4 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>   // Col2: A8_SDA/P0.04
             , <&gpio0 5 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>   // Col3: A9_SCL/P0.05
             ;
-
-        row-gpios 
-            = <&gpio1 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            , <&gpio1 14 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            , <&gpio1 13 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            , <&gpio1 12 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            , <&gpio0 2  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            , <&gpio0 3  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            ;
     };
 };
 
