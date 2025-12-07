@@ -6,11 +6,6 @@
 
 #include "sophy40.dtsi"
 
-// Disable I2C to use pins as GPIO
-&i2c0 {
-    status = "disabled";
-};
-
 &kscan0 {
     col-gpios
         = <&gpio1 15 GPIO_ACTIVE_HIGH>  // Col0: A6_MOSI/P1.15
