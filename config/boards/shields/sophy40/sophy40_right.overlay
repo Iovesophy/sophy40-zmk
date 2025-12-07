@@ -16,11 +16,11 @@
 
 &kscan0 {
     row-gpios 
-        = <&gpio1 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-        , <&gpio1 14 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-        , <&gpio1 13 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-        , <&gpio1 12 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-        , <&gpio0 2  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-        , <&gpio0 3  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+        = <&gpio1 15 GPIO_ACTIVE_HIGH>
+        , <&gpio1 14 GPIO_ACTIVE_HIGH>
+        , <&gpio1 13 GPIO_ACTIVE_HIGH>
+        , <&gpio1 12 GPIO_ACTIVE_HIGH>
+        , <&gpio0 2  GPIO_ACTIVE_HIGH>
+        , <&gpio0 3  GPIO_ACTIVE_HIGH>
         ;
 };
