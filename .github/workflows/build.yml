@@ -50,6 +50,12 @@ jobs:
       - name: Rename zmk.uf2 (Right)
         run: cp build/zephyr/zmk.uf2 sophy40_right_xiao_ble.uf2
       
+      - name: West Build (Settings Reset)
+        run: west build --pristine -s zmk/app -b seeeduino_xiao_ble -- -DSHIELD=settings_reset
+      
+      - name: Rename zmk.uf2 (Settings Reset)
+        run: cp build/zephyr/zmk.uf2 settings_reset-seeeduino_xiao_ble-zmk.uf2
+      
       - name: Archive artifacts
         uses: actions/upload-artifact@v4
         with:
