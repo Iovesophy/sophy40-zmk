@@ -17,39 +17,12 @@
 // | ESC  |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U  |  I  |  O  |  P  | DEL  |
 // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J  |  K  |  L  |  =  | ENT  |
 // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M  |  ,  |  .  |  /  |  ;   |
-//                    | TAB | MO1 | ALT | CMD | EN | SPC |   | SPC | JP | ← | → | ↑ | ↓ |
+//                    | TAB | NONE | ALT | CMD | EN | SPC |   | SPC | JP | ← | → | ↑ | ↓ |
                         bindings = <
    &kp ESC   &kp Q &kp W &kp E &kp R &kp T      &kp Y     &kp U  &kp I     &kp O   &kp P    &kp DEL
    &kp LCTRL &kp A &kp S &kp D &kp F &kp G      &kp H     &kp J  &kp K     &kp L   &kp EQUAL &kp RET
    &kp LSHFT &kp Z &kp X &kp C &kp V &kp B      &kp N     &kp M  &kp COMMA &kp DOT &kp FSLH &kp SEMI
-                  &kp TAB &mo 1 &kp LALT &kp LGUI &kp LANG2 &kp SPACE      &kp SPACE &kp LANG1 &kp LEFT &kp RIGHT &kp UP &kp DOWN
-                        >;
-                };
-                lower_layer {
-// -----------------------------------------------------------------------------------------
-// |  `   |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-// | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   |  -  |  [  |  ]  |  \  |  '  |      |
-// |      |     |     |     |     |     |   |     |     |     |     |     |      |
-//                    |     |     |     |     |     |     |   |     |     |     |     |     |     |
-                        bindings = <
-   &kp GRAVE  &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6    &kp N7   &kp N8   &kp N9    &kp N0  &kp BSPC
-   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp MINUS &kp LBKT &kp RBKT &kp BSLH  &kp SQT &trans
-   &trans     &trans       &trans       &trans       &trans       &trans         &trans    &trans   &trans   &trans    &trans  &trans
-                                    &trans &trans &trans &trans &trans &trans      &trans &trans &trans &trans &trans &trans
-                        >;
-                };
-
-                raise_layer {
-// -----------------------------------------------------------------------------------------
-// |  ~   |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | DEL  |
-// |      |     |     |     |     |     |   |  _  |  {  |  }  |  |  |  "  |      |
-// |      |     |     |     |     |     |   |     |     |  <  |  >  |  ?  |  :   |
-//                    |     |     |     |     |     |     |   |     |     |     |     |     |     |
-                        bindings = <
-   &kp TILDE &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS &kp ASTRK &kp LPAR &kp RPAR &kp DEL
-   &trans    &trans   &trans &trans   &trans   &trans      &kp UNDER &kp LBRC &kp RBRC  &kp PIPE &kp DQT  &trans
-   &trans    &trans   &trans &trans   &trans   &trans      &trans    &trans   &kp LT    &kp GT   &kp QMARK &kp COLON
-                             &trans &trans &trans &trans &trans &trans      &trans &trans &trans &trans &trans &trans
+                  &kp TAB &none &kp LALT &kp LGUI &kp LANG2 &kp SPACE      &kp SPACE &kp LANG1 &kp LEFT &kp RIGHT &kp UP &kp DOWN
                         >;
                 };
         };
