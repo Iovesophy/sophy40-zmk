@@ -38,8 +38,14 @@ jobs:
       - name: West Zephyr export
         run: west zephyr-export
       
+      - name: West Build (Test)
+        run: west build -s zmk/app -b seeeduino_xiao_ble -- -DSHIELD=sophy40_test -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
+      
+      - name: Rename zmk.uf2 (Test)
+        run: cp build/zephyr/zmk.uf2 sophy40_test_xiao_ble.uf2
+      
       - name: West Build (Left)
-        run: west build -s zmk/app -b seeeduino_xiao_ble -- -DSHIELD=sophy40_left -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
+        run: west build --pristine -s zmk/app -b seeeduino_xiao_ble -- -DSHIELD=sophy40_left -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
       
       - name: Rename zmk.uf2 (Left)
         run: cp build/zephyr/zmk.uf2 sophy40_left_xiao_ble.uf2
