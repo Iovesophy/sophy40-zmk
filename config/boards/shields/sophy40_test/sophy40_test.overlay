@@ -1,5 +1,5 @@
 /*
- * Test configuration - single key
+ * Test configuration - direct GPIO (no matrix)
  */
 
 #include <dt-bindings/zmk/matrix_transform.h>
@@ -7,24 +7,15 @@
 / {
     chosen {
         zmk,kscan = &kscan0;
-        zmk,matrix_transform = &default_transform;
-    };
-
-    default_transform: keymap_transform_0 {
-        compatible = "zmk,matrix-transform";
-        columns = <1>;
-        rows = <1>;
-        map = <RC(0,0)>;
     };
 
     kscan0: kscan {
-        compatible = "zmk,kscan-gpio-matrix";
+        compatible = "zmk,kscan-gpio-direct";
         label = "KSCAN";
-
-        diode-direction = "row2col";
         
-        row-gpios = <&gpio0 28 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;  // Row0
-        col-gpios = <&gpio1 15 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;  // Col0 (SW1 = T key)
+        input-gpios
+            = <&gpio1 15 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+            ;
     };
 };
 
