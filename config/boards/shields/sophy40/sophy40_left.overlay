@@ -6,6 +6,10 @@
 
 #include "sophy40.dtsi"
 
+&xiao_i2c {
+    status = "disabled";
+};
+
 &kscan0 {
     row-gpios 
         = <&gpio1 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>

@@ -6,6 +6,10 @@
 
 #include "sophy40.dtsi"
 
+&xiao_i2c {
+    status = "disabled";
+};
+
 &default_transform {
     col-offset = <6>;
 };
