@@ -27,8 +27,8 @@
         debounce-release-ms = <1>;
         
         // SW1 (T key): Col0=P1.15, Row0=P0.28
-        col-gpios = <&xiao_d 10 GPIO_ACTIVE_HIGH>;  // D10 = P1.15
-        row-gpios = <&xiao_d 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;  // D3 = P0.28
+        col-gpios = <&xiao_d 10 GPIO_ACTIVE_HIGH>;  // D10 = MOSI = P1.15
+        row-gpios = <&gpio0 28 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;  // P0.28
     };
 };
 
