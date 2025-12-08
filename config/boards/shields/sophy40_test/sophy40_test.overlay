@@ -28,7 +28,7 @@
         
         // SW1 (T key): Col0=P1.15, Row0=P0.28
         col-gpios = <&xiao_d 10 GPIO_ACTIVE_HIGH>;  // D10 = MOSI = P1.15
-        row-gpios = <&gpio0 28 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;  // P0.28
+        row-gpios = <&xiao_d 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;  // D2 = A2 = P0.28
     };
 };
 
