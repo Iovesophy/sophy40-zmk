@@ -22,13 +22,13 @@
         compatible = "zmk,kscan-gpio-matrix";
         label = "KSCAN";
 
-        diode-direction = "col2row";
+        diode-direction = "row2col";
         debounce-press-ms = <1>;
         debounce-release-ms = <1>;
         
-        // SW1 (T key): Col0=P1.15, Row0=P0.28
-        col-gpios = <&xiao_d 10 GPIO_ACTIVE_HIGH>;  // D10 = MOSI = P1.15
-        row-gpios = <&xiao_d 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;  // D2 = A2 = P0.28
+        // SW1 (T key): Try swapping row/col
+        row-gpios = <&xiao_d 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;  // D10 = MOSI = P1.15
+        col-gpios = <&xiao_d 2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;  // D2 = A2 = P0.28
     };
 };
 
