@@ -1,2 +1,0 @@
-config SHIELD_SOPHY40_TEST
-    def_bool $(shields_list_contains,sophy40_test)
