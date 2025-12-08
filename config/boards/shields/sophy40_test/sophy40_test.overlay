@@ -12,19 +12,19 @@
         compatible = "zmk,kscan-gpio-direct";
         label = "KSCAN";
         
-        // Test all D0-D10 pins as direct inputs
+        // Test using gpio0/gpio1 notation
         input-gpios
-            = <&xiao_d 0 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
-            , <&xiao_d 1 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
-            , <&xiao_d 2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
-            , <&xiao_d 3 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
-            , <&xiao_d 4 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
-            , <&xiao_d 5 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
-            , <&xiao_d 6 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
-            , <&xiao_d 7 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
-            , <&xiao_d 8 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
-            , <&xiao_d 9 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
-            , <&xiao_d 10 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+            = <&gpio0 2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>   // P0.02
+            , <&gpio0 3 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>   // P0.03
+            , <&gpio0 28 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  // P0.28
+            , <&gpio0 29 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  // P0.29
+            , <&gpio0 4 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>   // P0.04
+            , <&gpio0 5 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>   // P0.05
+            , <&gpio1 11 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  // P1.11
+            , <&gpio1 12 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  // P1.12
+            , <&gpio1 13 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  // P1.13
+            , <&gpio1 14 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  // P1.14
+            , <&gpio1 15 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  // P1.15
             ;
     };
 };
