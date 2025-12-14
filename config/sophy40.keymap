@@ -14,14 +14,14 @@
                         compatible = "zmk,behavior-tap-dance";
                         #binding-cells = <0>;
                         tapping-term-ms = <300>;
-                        bindings = <&kp LANG1>, <&tog 2>;
+                        bindings = <&kp LANG1>, <&mo 2>;
                 };
                 
                 td1: tap_dance_1 {
                         compatible = "zmk,behavior-tap-dance";
                         #binding-cells = <0>;
                         tapping-term-ms = <300>;
-                        bindings = <&kp LANG2>, <&tog 1>;
+                        bindings = <&kp LANG2>, <&mo 1>;
                 };
         };
 
