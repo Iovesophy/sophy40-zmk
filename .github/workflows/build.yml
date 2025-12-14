@@ -39,22 +39,22 @@ jobs:
         run: west zephyr-export
       
       - name: West Build (Left)
-        run: west build --pristine -s zmk/app -b seeeduino_xiao_ble -- -DSHIELD=sophy40_left -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
+        run: west build --pristine -s zmk/app -b xiao_ble -- -DSHIELD=sophy40_left -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
       
       - name: Rename zmk.uf2 (Left)
-        run: cp build/zephyr/zmk.uf2 sophy40_left_seeeduino_xiao_ble.uf2
+        run: cp build/zephyr/zmk.uf2 sophy40_left_xiao_ble.uf2
       
       - name: West Build (Right)
-        run: west build --pristine -s zmk/app -b seeeduino_xiao_ble -- -DSHIELD=sophy40_right -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
+        run: west build --pristine -s zmk/app -b xiao_ble -- -DSHIELD=sophy40_right -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
       
       - name: Rename zmk.uf2 (Right)
-        run: cp build/zephyr/zmk.uf2 sophy40_right_seeeduino_xiao_ble.uf2
+        run: cp build/zephyr/zmk.uf2 sophy40_right_xiao_ble.uf2
       
       - name: West Build (Settings Reset)
-        run: west build --pristine -s zmk/app -b seeeduino_xiao_ble -- -DSHIELD=settings_reset
+        run: west build --pristine -s zmk/app -b xiao_ble -- -DSHIELD=settings_reset
       
       - name: Rename zmk.uf2 (Settings Reset)
-        run: cp build/zephyr/zmk.uf2 settings_reset-seeeduino_xiao_ble-zmk.uf2
+        run: cp build/zephyr/zmk.uf2 settings_reset-xiao_ble-zmk.uf2
       
       - name: Archive artifacts
         uses: actions/upload-artifact@v4
