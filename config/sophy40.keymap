@@ -44,12 +44,12 @@
 
                 number_layer {
 // -----------------------------------------------------------------------------------------
-// |      |     |     |     |     |     |   |     |     |  9  |  7  |  8  |  0   |
+// |      |     |     |     |     |     |   |     |  9  |  7  |  8  |  9  |  0   |
 // |      |     |     |     |     |     |   |  H  |  J  |  K  |  4  |  5  |  6   |
 // |      |     |     |     |     |     |   |     |     |     |  1  |  2  |  3   |
 //                    |     |     |     |     |     |     |   |     |     |  L  |  .  | ENT |     |
                         bindings = <
-   &trans    &trans &trans &trans &trans &trans    &trans    &trans &kp N9    &kp N7   &kp N8   &kp N0
+   &trans    &trans &trans &trans &trans &trans    &trans    &kp N9 &kp N7    &kp N8   &kp N9   &kp N0
    &trans    &trans &trans &trans &trans &trans    &kp H     &kp J  &kp K     &kp N4   &kp N5   &kp N6
    &trans    &trans &trans &trans &trans &trans    &trans    &trans &trans    &kp N1   &kp N2   &kp N3
                   &trans &trans &trans &trans &trans &trans      &trans &trans &kp L &kp DOT &kp RET &trans
