@@ -47,12 +47,12 @@
 // |      |     |     |     |     |     |   |     |     |  9  |  7  |  8  |  9   |
 // |      |     |     |     |     |     |   |  H  |  J  |  K  |  4  |  5  |  6   |
 // |      |     |     |     |     |     |   |     |     |     |  1  |  2  |  3   |
-//                    |     |     |     |     |     |     |   |     |     |  L  |  0  | ENT |     |
+//                    |     |     |     |     |     |     |   |     |     |  .  |  0  | ENT |     |
                         bindings = <
    &trans    &trans &trans &trans &trans &trans    &trans    &trans &kp N9    &kp N7   &kp N8   &kp N9
    &trans    &trans &trans &trans &trans &trans    &kp H     &kp J  &kp K     &kp N4   &kp N5   &kp N6
    &trans    &trans &trans &trans &trans &trans    &trans    &trans &trans    &kp N1   &kp N2   &kp N3
-                  &trans &trans &trans &trans &trans &trans      &trans &trans &kp L &kp N0 &kp RET &trans
+                  &trans &trans &trans &trans &trans &trans      &trans &trans &kp DOT &kp N0 &kp RET &trans
                         >;
                 };
 
