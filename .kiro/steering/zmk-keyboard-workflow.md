@@ -98,8 +98,34 @@ col-gpios = <&xiao_d 10 ...>, <&xiao_d 9 ...>, ...;
 - **マッピングがずれる**：Arduinoで再テスト
 - **I2Cピンが動作しない**：`Wire.end()` または `&xiao_i2c { status = "disabled"; }` を確認
 
+### 7. ボード名とビルド設定
+
+**重要：XIAO nRF52840の正しいボード名**
+
+GitHub Actionsワークフローファイル（`.github/workflows/build.yml`）では、必ず以下のボード名を使用する：
+
+```yaml
+# 正しいボード名
+-b xiao_ble
+
+# 間違ったボード名（使用禁止）
+-b seeeduino_xiao_ble  # 古い名前、エラーの原因
+```
+
+**ワークフローファイルの正しい設定例：**
+
+```yaml
+- name: West Build (Left)
+  run: west build --pristine -s zmk/app -b xiao_ble -- -DSHIELD=sophy40_left -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
+
+- name: West Build (Right)  
+  run: west build --pristine -s zmk/app -b xiao_ble -- -DSHIELD=sophy40_right -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
+```
+
 ### 注意事項
 
 - ネットリストだけでは不十分。実際の配線を確認する。
 - テスターで導通確認しても、Arduinoで反応しない場合がある（I2C、ソケット不良など）。
 - 必ず全キーをテストしてから、ZMKの設定を開始する。
+- **ボード名は絶対に `xiao_ble` を使用する**。他の名前はビルドエラーの原因となる。
+- ZMKのバージョンは `main` ブランチを使用（`config/west.yml`）。
