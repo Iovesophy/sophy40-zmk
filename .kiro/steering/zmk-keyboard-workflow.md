@@ -122,6 +122,54 @@ GitHub Actionsワークフローファイル（`.github/workflows/build.yml`）�
   run: west build --pristine -s zmk/app -b xiao_ble -- -DSHIELD=sophy40_right -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
 ```
 
+### 8. プッシュ前の最終確認プロセス
+
+**重要：必ずプッシュ前に以下を確認する**
+
+#### 最終確認チェックリスト
+
+1. **キーマップファイルの確認**
+   ```bash
+   # ファイル内容を確認
+   cat config/sophy40.keymap
+   ```
+
+2. **レイヤー構成の確認**
+   - デフォルトレイヤー（0）: 基本QWERTY配列
+   - 数字レイヤー（1）: 数字・記号・Vimナビゲーション
+   - その他のレイヤー: 必要に応じて
+
+3. **タップダンス設定の確認**
+   - ENキー: `LANG2` / 数字レイヤー切り替え
+   - 右スペース: `SPACE` / 数字レイヤー切り替え
+   - その他のタップダンス
+
+4. **Combo設定の確認**
+   - Fnキー + QWERTYキーの組み合わせ
+   - 記号入力の正確性
+
+5. **構文エラーのチェック**
+   ```bash
+   # 構文エラーがないか確認
+   git add config/sophy40.keymap
+   git status
+   ```
+
+6. **コミット前の最終レビュー**
+   - 変更内容の説明を明確に記述
+   - 意図しない変更が含まれていないか確認
+
+7. **プッシュ実行**
+   ```bash
+   git commit -m "明確な変更内容の説明"
+   git push
+   ```
+
+#### プッシュ後の確認
+
+- GitHub Actionsでビルドが成功することを確認
+- エラーが発生した場合は即座に修正
+
 ### 注意事項
 
 - ネットリストだけでは不十分。実際の配線を確認する。
@@ -129,3 +177,4 @@ GitHub Actionsワークフローファイル（`.github/workflows/build.yml`）�
 - 必ず全キーをテストしてから、ZMKの設定を開始する。
 - **ボード名は絶対に `xiao_ble` を使用する**。他の名前はビルドエラーの原因となる。
 - ZMKのバージョンは `main` ブランチを使用（`config/west.yml`）。
+- **プッシュ前は必ず最終確認プロセスを実行する**。
