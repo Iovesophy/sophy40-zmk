@@ -10,13 +10,6 @@
 
 / {
         behaviors {
-                td0: tap_dance_0 {
-                        compatible = "zmk,behavior-tap-dance";
-                        #binding-cells = <0>;
-                        tapping-term-ms = <200>;
-                        bindings = <&kp RIGHT>, <&mo 1>;
-                };
-                
                 td1: tap_dance_1 {
                         compatible = "zmk,behavior-tap-dance";
                         #binding-cells = <0>;
@@ -38,7 +31,7 @@
    &kp ESC   &kp Q &kp W &kp E &kp R &kp T      &kp Y     &kp U  &kp I     &kp O   &kp P    &kp BSPC
    &kp LCTRL &kp A &kp S &kp D &kp F &kp G      &kp H     &kp J  &kp K     &kp L   &kp SEMI &kp RET
    &kp LSHFT &kp Z &kp X &kp C &kp V &kp B      &kp N     &kp M  &kp COMMA &kp DOT &kp FSLH &kp MINUS
-                  &kp TAB &kp PLUS &kp LALT &kp LGUI &td1 &kp SPACE      &kp SPACE &kp LANG1 &kp LEFT &kp UP &kp DOWN &td0
+                  &kp TAB &kp PLUS &kp LALT &kp LGUI &td1 &kp SPACE      &kp SPACE &kp LANG1 &kp LEFT &kp UP &kp DOWN &kp RIGHT
                         >;
                 };
 
